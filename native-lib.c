@@ -23,7 +23,7 @@ void  readStatus();
 jboolean readProcInfo(JNIEnv* env, jobject thiz )
 {
 
-    bool isContainsx86 = false;
+ 
 
       pthread_t pthreadId = 3;
 
@@ -32,7 +32,7 @@ jboolean readProcInfo(JNIEnv* env, jobject thiz )
     pthread_create(&pthreadId,NULL,readStatus,NULL);
 
 
-    return isContainsx86;
+    return false;
 }
 
 void  readStatus(){
